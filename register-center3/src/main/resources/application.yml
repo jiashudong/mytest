@@ -1,0 +1,17 @@
+
+
+spring:
+  application:
+    #应用名
+    name: register-center
+server:
+  port: 8093
+
+# Eureka点对点模式，保证注册中心高可用，注册的实例信息会在点与点之间相互同步
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1.com:8091/eureka/,http://peer2.com:8092/eureka/,http://peer3.com:8093/eureka/
+  instance:
+    #在本机hosts中配置即可
+    hostname: peer3.com

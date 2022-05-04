@@ -1,0 +1,20 @@
+spring:
+  application:
+    #应用名，也是Eureka的服务名
+    name: config-client
+  cloud:
+    config:
+      name: servicestation
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: pro
+
+eureka:
+  client:
+    #注册中心地址
+    serviceUrl:
+      defaultZone: http://peer1.com:8091/eureka/,http://peer2.com:8092/eureka/,http://peer3.com:8093/eureka/
+server:
+  port: 1003
+
