@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.jiasd</groupId>
-    <artifactId>provide2</artifactId>
+    <artifactId>provider2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>provider2</name>
     <description>Demo project for Spring Boot</description>

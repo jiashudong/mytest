@@ -18,7 +18,7 @@ public class RestService {
 
     @GetMapping("/sayHello")
     public String sayHello(String name) {
-        LOG.info("sayHello was called");
+        LOG.info("sayHello was called1");
         return "hello, " + name;
     }
 }

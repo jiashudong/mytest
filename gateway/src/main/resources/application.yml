@@ -2,16 +2,24 @@ spring:
   application:
     name: ureka-client-gateway
   cloud:
+    #gateway:
+    #routes[0]:
+    #id: cosumer-1
+    #uri:  lb://cosumer
+    #predicates[0]:  Path=/testGet
+
+    #routes[1]:
+    #id: cosumer-2
+    #uri:  lb://cosumer
+    #predicates[0]:  Path=/testGets
+
     gateway:
       routes[0]:
         id: cosumer-1
         uri:  lb://cosumer
-        predicates[0]:  Path=/testGet
-
-      routes[1]:
-        id: cosumer-2
-        uri:  lb://cosumer
-        predicates[0]:  Path=/testGets
+        predicates[0]: Path=/testGets
+        #predicates[0]: Path=/**
+        #filters[0]: PrefixPath=/testGets
 
       discovery:
         locator:
@@ -19,7 +27,6 @@ spring:
 
 eureka:
   client:
-    #\u6CE8\u518C\u4E2D\u5FC3\u5730\u5740
     serviceUrl:
       defaultZone: http://peer1.com:8091/eureka/,http://peer2.com:8092/eureka/,http://peer3.com:8093/eureka/
 

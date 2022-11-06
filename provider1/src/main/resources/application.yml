@@ -10,6 +10,8 @@ server:
 
 eureka:
   client:
+    #registerWithEureka: false
+    #fetchRegistry: false
     #注册中心地址
     serviceUrl:
       #注册中心独立模式

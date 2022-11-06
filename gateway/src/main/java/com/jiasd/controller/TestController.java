@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-    /*@GetMapping("/testgets")
+    /*@GetMapping("/testGets")
     public String testGet() {
         return "dddd";
+    }
+    @GetMapping("/test")
+    public String testGe() {
+        return "tttttttttt";
     }*/
 }
