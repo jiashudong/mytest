@@ -1,4 +1,4 @@
 package com.jiasd.controller;
 
-public class Tests   {
+public class Tests    {
 }
