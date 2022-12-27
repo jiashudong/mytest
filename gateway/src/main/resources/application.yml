@@ -2,24 +2,26 @@ spring:
   application:
     name: ureka-client-gateway
   cloud:
-    #gateway:
-    #routes[0]:
-    #id: cosumer-1
-    #uri:  lb://cosumer
-    #predicates[0]:  Path=/testGet
-
-    #routes[1]:
-    #id: cosumer-2
-    #uri:  lb://cosumer
-    #predicates[0]:  Path=/testGets
-
     gateway:
-      routes[0]:
-        id: cosumer-1
-        uri:  lb://cosumer
-        predicates[0]: Path=/testGets
-        #predicates[0]: Path=/**
+      routes:
+        - id: cosumer-1
+          uri: lb://cosumer
+          predicates:
+            - Path=/testGets
+            - Before=2023-06-28T00:01:26.099+08:00[Asia/Shanghai]
+
+    #gateway:
+      #routes[0]:
+        #id: cosumer-1
+        #uri:  lb://cosumer
+        #predicates[0]: Path=/testGets
         #filters[0]: PrefixPath=/testGets
+
+      #routes[1]:
+        #id: cosumer-2
+        #uri:  lb://cosumer
+        #predicates:
+          #Path=/testGet
 
       discovery:
         locator:
